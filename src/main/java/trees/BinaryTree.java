@@ -4,7 +4,7 @@ public class BinaryTree {
 
     private Node head;
 
-    public Node createTree() {
+    public Node initialize() {
         Node head = new Node(0);
         Node node1 = new Node(1);
         Node node2 = new Node(2);
@@ -15,6 +15,7 @@ public class BinaryTree {
         Node node7 = new Node(7);
         Node node8 = new Node(8);
         Node node9 = new Node(9);
+        Node node10 = new Node(10);
 
         head.setL(node1);
         head.setR(node2);
@@ -30,6 +31,8 @@ public class BinaryTree {
 
         node6.setR(node9);
 
+        node9.setL(node10);
+
         this.head = head;
         return head;
     }
@@ -39,11 +42,15 @@ public class BinaryTree {
         System.out.println();
     }
 
-    public void printTree(Node head) {
+    private void printTree(Node head) {
         if (head == null) return;
 
         printTree(head.getL());
         System.out.print(head.getVal() + "  ");
         printTree(head.getR());
+    }
+
+    public Node getHead() {
+        return head;
     }
 }

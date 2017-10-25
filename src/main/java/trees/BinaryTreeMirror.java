@@ -4,7 +4,7 @@ public class BinaryTreeMirror {
 
     public static void main(String[] args) {
         BinaryTree binaryTree = new BinaryTree();
-        Node head = binaryTree.createTree();
+        Node head = binaryTree.initialize();
 
         binaryTree.printTree();
         mirrorTree(head);
