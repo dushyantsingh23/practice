@@ -1,6 +1,4 @@
-package heap;
-
-import java.util.Arrays;
+package sorting;
 
 public class HeapSort {
 
